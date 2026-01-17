@@ -103,8 +103,8 @@ The simulations combine **data cleaning, visualization, trend analysis, and anim
 
 **Static Plots:**  
 ![Annual Temperature Anomaly](plots/eda/temp_anomaly_line.png)  
-![10-Year Rolling Mean](plots/eda/rolling_mean_temp_anomaly.png)  
-![Trend Overlay](plots/eda/temp_anomaly_trends.png)  
+![10-Year Rolling Mean](plots/eda/rolling_mean.png)  
+![Trend Overlay](plots/eda/temp_anomaly_animation.gif)  
 
 **Key Features:**  
 - Shows year-to-year variability  
@@ -133,8 +133,8 @@ The simulations combine **data cleaning, visualization, trend analysis, and anim
 - `scripts/stat_analysis.py`  
 
 **Static Plots:**  
-![Trend Analysis](plots/stat/trend_comparison.png)  
-![Error Bounds](plots/stat/error_bounds.png)  
+![Trend Analysis](plots/stat/temperature_trends.png)  
+![Error Bounds](plots/stat/temp_anomaly_hist.png)  
 
 **Key Features:**  
 - Trend line highlights acceleration in recent decades  
@@ -224,21 +224,6 @@ Copy code
 
 ---
 
-## Phase-wise Completion Confirmation
-
-| Phase | Done? | Outputs |
-|-------|-------|---------|
-| Phase 0 – Setup | ✅ | Root folder + notepad with dataset/steps |
-| Phase 1 – Raw Data Intake | ✅ | data/raw/global_temp_anomaly.csv |
-| Phase 2 – Data Cleaning | ✅ | data/clean/cleaned_temp_anomaly.csv; scripts/clean_data.py |
-| Phase 3 – EDA | ✅ | plots/eda/rolling_mean_temp_anomaly.png, temp_anomaly_line.png, temp_anomaly_trends.png |
-| Phase 4 – Statistical Analysis | ✅ | plots/stat/trend_comparison.png, error_bounds.png; scripts/stat_analysis.py |
-| Phase 5 – Insight Isolation | ✅ | results/final_insight.txt |
-| Phase 6 – Visual Synthesis + GIF | ✅ | plots/final/summary_plot.png; gifs/insight_evolution.gif |
-| Phase 7 – Closure | ✅ | Verified all scripts run end-to-end, no missing outputs; optional notebook exists |
-
----
-
 ## Conclusion
 
 This project demonstrates **global temperature anomaly trends** from 1880–2025.  
@@ -248,4 +233,4 @@ By progressing through data intake, cleaning, exploratory and statistical analys
 - Rolling mean and trend analysis provide temporal context  
 - Animated GIF communicates evolution clearly  
 
-The project combines **data science, statistical rigor, visualization, and storytelling**, suitable for 
+
