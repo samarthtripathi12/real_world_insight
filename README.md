@@ -80,7 +80,8 @@ The simulations combine **data cleaning, visualization, trend analysis, and anim
 - `scripts/clean_data.py` reads raw CSV → outputs cleaned CSV  
 
 **End-state / Outputs:**  
-- `data/clean/cleaned_dataset.csv`  
+- `data/clean/cleaned_temp_anomaly.csv`  
+- Script: `scripts/clean_data.py`  
 
 **What This Proves:**  
 - Clean dataset ready for reproducible analysis  
@@ -103,6 +104,7 @@ The simulations combine **data cleaning, visualization, trend analysis, and anim
 **Static Plots:**  
 ![Annual Temperature Anomaly](plots/eda/temp_anomaly_line.png)  
 ![10-Year Rolling Mean](plots/eda/rolling_mean_temp_anomaly.png)  
+![Trend Overlay](plots/eda/temp_anomaly_trends.png)  
 
 **Key Features:**  
 - Shows year-to-year variability  
@@ -111,6 +113,7 @@ The simulations combine **data cleaning, visualization, trend analysis, and anim
 **End-state / Outputs:**  
 - `plots/eda/temp_anomaly_line.png`  
 - `plots/eda/rolling_mean_temp_anomaly.png`  
+- `plots/eda/temp_anomaly_trends.png`  
 
 **What This Proves:**  
 - Variability and trend quantified visually  
@@ -130,7 +133,7 @@ The simulations combine **data cleaning, visualization, trend analysis, and anim
 - `scripts/stat_analysis.py`  
 
 **Static Plots:**  
-![Trend Analysis](plots/stat/temp_anomaly_trends.png)  
+![Trend Analysis](plots/stat/trend_comparison.png)  
 ![Error Bounds](plots/stat/error_bounds.png)  
 
 **Key Features:**  
@@ -138,8 +141,9 @@ The simulations combine **data cleaning, visualization, trend analysis, and anim
 - Error bounds quantify confidence  
 
 **End-state / Outputs:**  
-- `plots/stat/temp_anomaly_trends.png`  
+- `plots/stat/trend_comparison.png`  
 - `plots/stat/error_bounds.png`  
+- Script: `scripts/stat_analysis.py`  
 
 **What This Proves:**  
 - Warming trend statistically validated  
@@ -161,7 +165,7 @@ The simulations combine **data cleaning, visualization, trend analysis, and anim
 **Insight:**  
 Global mean temperature anomalies have risen consistently since 1880, with accelerated warming observed in the last 40 years.
 
-markdown
+yaml
 Copy code
 
 **What This Proves:**  
@@ -212,12 +216,26 @@ Copy code
 - Ensure no missing files  
 
 **Files & Outputs:**  
-- `notebooks/final_analysis.ipynb` (optional)  
+- Optional notebook: `notebooks/final_analysis.ipynb`  
 
 **End-state / Outputs:**  
 - Project fully reproducible  
 - All phases complete  
-- Ready for presentation or submission  
+
+---
+
+## Phase-wise Completion Confirmation
+
+| Phase | Done? | Outputs |
+|-------|-------|---------|
+| Phase 0 – Setup | ✅ | Root folder + notepad with dataset/steps |
+| Phase 1 – Raw Data Intake | ✅ | data/raw/global_temp_anomaly.csv |
+| Phase 2 – Data Cleaning | ✅ | data/clean/cleaned_temp_anomaly.csv; scripts/clean_data.py |
+| Phase 3 – EDA | ✅ | plots/eda/rolling_mean_temp_anomaly.png, temp_anomaly_line.png, temp_anomaly_trends.png |
+| Phase 4 – Statistical Analysis | ✅ | plots/stat/trend_comparison.png, error_bounds.png; scripts/stat_analysis.py |
+| Phase 5 – Insight Isolation | ✅ | results/final_insight.txt |
+| Phase 6 – Visual Synthesis + GIF | ✅ | plots/final/summary_plot.png; gifs/insight_evolution.gif |
+| Phase 7 – Closure | ✅ | Verified all scripts run end-to-end, no missing outputs; optional notebook exists |
 
 ---
 
@@ -230,4 +248,4 @@ By progressing through data intake, cleaning, exploratory and statistical analys
 - Rolling mean and trend analysis provide temporal context  
 - Animated GIF communicates evolution clearly  
 
-The project combines **data science, statistical rigor, visualization, and storytelling**, suitable for top university applications.
+The project combines **data science, statistical rigor, visualization, and storytelling**, suitable for 
