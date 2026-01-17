@@ -1,0 +1,82 @@
+Dataset Identification
+
+Domain:
+Climate Science / Environmental Data Analysis
+
+Dataset:
+Global Surface Temperature Anomalies (NASA GISS)
+
+Data Type:
+Time-series data
+
+Expected Time Range:
+1880 to present (annual resolution)
+
+Primary Variable:
+Global mean surface temperature anomaly (°C relative to baseline)
+
+Secondary Variables:
+Year (time index)
+
+Data Characteristics:
+- Long historical range
+- Year-to-year variability (noise)
+- Long-term trend potentially non-linear
+- Suitable for trend comparison across time periods
+
+Reason for Selection:
+This dataset enables analysis of long-term trends versus short-term fluctuations
+and allows investigation of whether the rate of change itself varies across time,
+rather than assuming a single linear trend.
+
+
+Core Research Question
+
+Is the increase in global surface temperature best described by a single
+constant trend over time, or does the rate of warming change between
+earlier and more recent periods?
+
+Hypothesis
+
+The rate of increase in global surface temperature anomalies is higher
+in the late 20th and early 21st century compared to the earlier
+historical period, indicating an acceleration rather than a single
+constant warming trend.
+
+
+Measurement Plan
+
+Primary Metric:
+Annual global mean surface temperature anomaly (°C).
+
+Trend Measurement:
+Linear regression slope of temperature anomaly versus time.
+
+Comparison Strategy:
+The dataset will be divided into two time periods:
+- Early period: 1880 to 1975
+- Recent period: 1976 to present
+
+The rate of warming will be measured by comparing the regression slopes
+between these two periods.
+
+Supporting Metrics:
+- Rolling mean (10-year window) to reduce short-term variability
+- Residual analysis to assess goodness of fit
+
+Evaluation Criterion:
+A statistically significant increase in slope in the recent period
+will be interpreted as evidence of accelerated warming.
+
+
+Success Criteria
+
+Phase 0 will be considered complete if:
+- A single real-world dataset has been clearly identified
+- One core research question has been defined
+- One testable hypothesis has been stated
+- Measurement metrics and comparison strategy have been fixed
+- No data analysis or visualization has been performed yet
+
+Only after these conditions are met will data acquisition and analysis
+begin in Phase 1.
