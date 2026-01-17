@@ -1,211 +1,233 @@
-# Real-World Global Temperature Anomaly Analysis
+# Global Temperature Anomaly Analysis
 
-Analyzes historical global temperature anomaly data using Python, with exploratory data analysis, statistical modeling, and animated visualizations.
+Analyzes historical global temperature anomaly data (1880–2025) using Python.  
+Includes data cleaning, exploratory analysis, statistical modeling, and animated visualization.
 
 ---
 
 ## Abstract
 
-This project analyzes global temperature anomalies from 1880–2025 using Python. It progressively explores:
+This project studies the trajectory of global temperature anomalies over the last 145 years.  
+It progressively explores:
 
-1. **Raw data intake & cleaning**  
-2. **Exploratory Data Analysis (EDA)**  
-3. **Statistical trend analysis**  
-4. **Insight isolation & visual storytelling**  
+1. **Raw dataset trends**  
+2. **Rolling mean and variability**  
+3. **Statistical trend modeling**  
+4. **Animated evolution of anomalies**  
 
-The simulations combine numerical analysis, visualization, and animation to demonstrate trends, variability, and quantitative climate insights.
+The simulations combine **data cleaning, visualization, trend analysis, and animation** to demonstrate real-world climate insights.
 
 ---
 
 ## Why This Project
 
-- Provides hands-on demonstration of applied data science on climate data.  
-- Highlights long-term temperature trends and variability.  
-- Combines EDA, statistical analysis, and visualization to extract meaningful insight.  
-- Generates static plots and animated GIFs to make results intuitive.  
-- Connects raw data to a defensible, singular insight for maximum impact.
+- Provides hands-on experience with real-world climate data.  
+- Highlights long-term warming trends and variability.  
+- Demonstrates ability to produce reproducible, interactive, and visual analyses.  
+- Combines static plots, animated GIFs, and statistical rigor.  
+- Perfect for demonstrating interdisciplinary data science skills.
 
 ---
 
 ## Development Iterations
 
-- **v1.0:** Raw data download and storage  
-- **v2.0:** Data cleaning (missing values, formatting)  
-- **v3.0:** EDA plots and visualizations  
-- **v4.0:** Statistical analysis and trend fitting  
-- **v5.0:** Insight isolation and GIF animation  
-- **v6.0:** Final summary plot combining all results  
+- **v1.0:** Raw data intake and cleaning  
+- **v2.0:** Exploratory analysis with static plots  
+- **v3.0:** Statistical trend analysis  
+- **v4.0:** Animated visualization showing evolution of anomalies  
 
 ---
 
 ## Verification
 
-- Cleaned dataset: `data/clean/cleaned_dataset.csv`  
-- Phase outputs verified visually and numerically  
-- Animated GIF: `gifs/insight_evolution.gif` demonstrates full process  
-
----
-
-## Requirements
-
-- Python 3.11+  
-- NumPy  
-- Pandas  
-- Matplotlib  
-- Seaborn  
-- (Optional) Plotly for interactive visuals  
+- Rolling mean plots and trend lines validate statistical calculations  
+- Final summary plot and GIF confirm visual story  
+- Insights cross-checked with historical climate records  
 
 ---
 
 ## Phase 1: Raw Data Intake
 
 **Scientific Question:**  
-“What does the raw historical temperature data look like?”
+“What data is available and in what form?”  
 
 **Description:**  
-- Downloaded global land+ocean temperature anomaly CSV.  
-- Preserved raw data for reproducibility.
+- Downloaded global temperature anomaly CSV (1880–2025)  
+- Preserved raw data without modification  
+
+**Implementation:**  
+- Place raw CSV in `data/raw/`  
 
 **End-state / Outputs:**  
-- `data/raw/global_temp_anomaly_annual.csv`  
+- `data/raw/global_temp_anomaly.csv`  
 
 **What This Proves:**  
-- Ensures reproducible workflow from raw data  
-- Establishes foundation for cleaning and analysis  
+- Data is preserved for reproducibility  
+- Foundation for all subsequent analysis  
 
 ---
 
 ## Phase 2: Data Cleaning
 
 **Scientific Question:**  
-“Can the raw data be structured for analysis?”
+“How do we prepare raw data for analysis?”  
 
 **Description:**  
-- Handled missing values and formatting issues  
-- Normalized columns and renamed variables for clarity  
-- Created a clean CSV for analysis
+- Handle missing values  
+- Normalize column names and units  
+
+**Implementation:**  
+- `scripts/clean_data.py` reads raw CSV → outputs cleaned CSV  
 
 **End-state / Outputs:**  
-- Code: `scripts/clean_data.py`  
-- Clean dataset: `data/clean/cleaned_dataset.csv`  
+- `data/clean/cleaned_dataset.csv`  
 
 **What This Proves:**  
-- Dataset is analysis-ready  
-- Cleaning process is reproducible  
+- Clean dataset ready for reproducible analysis  
 
 ---
 
 ## Phase 3: Exploratory Data Analysis (EDA)
 
 **Scientific Question:**  
-“What patterns and variability exist in the data?”
+“What patterns, trends, and variability exist in the data?”  
 
 **Description:**  
-- Created line plots of annual temperature anomalies  
-- Generated histograms of variability  
-- Calculated rolling means to highlight trends
+- Visualize annual temperature anomalies  
+- Compute 10-year rolling mean  
+
+**Implementation:**  
+- `scripts/eda.py`  
+- Line plots and rolling mean generated  
+
+**Static Plots:**  
+![Annual Temperature Anomaly](plots/eda/temp_anomaly_line.png)  
+![10-Year Rolling Mean](plots/eda/rolling_mean_temp_anomaly.png)  
+
+**Key Features:**  
+- Shows year-to-year variability  
+- Reveals long-term warming trend  
 
 **End-state / Outputs:**  
-- Code: `scripts/eda.py`  
-- Plots:  
-  - `plots/eda/temp_anomaly_line.png`  
-  - `plots/eda/rolling_mean_temp_anomaly.png`  
-  - `plots/eda/temp_anomaly_distribution.png`  
+- `plots/eda/temp_anomaly_line.png`  
+- `plots/eda/rolling_mean_temp_anomaly.png`  
 
 **What This Proves:**  
-- Shows variability and long-term trends  
-- Provides intuition before statistical modeling  
+- Variability and trend quantified visually  
 
 ---
 
 ## Phase 4: Statistical Analysis
 
 **Scientific Question:**  
-“What is the quantitative trend of global temperatures?”
+“What is the quantitative trend in global temperature anomalies?”  
 
 **Description:**  
-- Fit linear and polynomial trends to the cleaned data  
-- Computed confidence intervals  
-- Quantified trend magnitude and yearly change  
+- Fit linear regression and polynomial trend lines  
+- Compute error bounds  
+
+**Implementation:**  
+- `scripts/stat_analysis.py`  
+
+**Static Plots:**  
+![Trend Analysis](plots/stat/temp_anomaly_trends.png)  
+![Error Bounds](plots/stat/error_bounds.png)  
+
+**Key Features:**  
+- Trend line highlights acceleration in recent decades  
+- Error bounds quantify confidence  
 
 **End-state / Outputs:**  
-- Code: `scripts/stat_analysis.py`  
-- Plots:  
-  - `plots/stat/temp_anomaly_trends.png`  
-  - `plots/stat/error_bounds.png`  
+- `plots/stat/temp_anomaly_trends.png`  
+- `plots/stat/error_bounds.png`  
 
 **What This Proves:**  
-- Trend is statistically significant  
-- Variability quantified numerically  
+- Warming trend statistically validated  
+- Provides numerical evidence for insight  
 
 ---
 
 ## Phase 5: Insight Isolation
 
 **Scientific Question:**  
-“What single, defensible insight emerges from the analysis?”
+“What singular insight can we derive from this dataset?”  
 
 **Description:**  
-- Selected most compelling insight: **the increasing trend of global temperature anomalies**  
-- Backed by statistical evidence and rolling averages  
+- Summarize key finding in one defensible statement  
 
-**End-state / Outputs:**  
+**File:**  
 - `results/final_insight.txt`  
 
+**Insight:**  
+Global mean temperature anomalies have risen consistently since 1880, with accelerated warming observed in the last 40 years.
+
+markdown
+Copy code
+
 **What This Proves:**  
-- Data-driven conclusion  
-- Insight is clear, actionable, and verifiable  
+- Provides a clear, evidence-backed conclusion  
 
 ---
 
-## Phase 6: Visual Synthesis & GIF Animation
+## Phase 6: Visual Synthesis + GIF
 
 **Scientific Question:**  
-“How can the story of temperature change be visualized dynamically?”
+“How can the analysis be communicated visually?”  
 
 **Description:**  
-- Combined rolling mean, trend, and yearly anomalies into a single summary plot  
-- Created animated GIF showing the evolution of anomalies over time  
+- Combine line plot, rolling mean, and trend into a single summary plot  
+- Animate evolution of anomalies over time  
+
+**Files & Outputs:**  
+- Summary plot: `plots/final/summary_plot.png`  
+- GIF: `gifs/insight_evolution.gif`  
+
+**Summary Plot:**  
+![Summary Plot](plots/final/summary_plot.png)  
+
+**Animated Evolution:**  
+![Insight Evolution](gifs/insight_evolution.gif)  
+
+**Key Features:**  
+- Combines all major visualizations  
+- Shows temporal progression clearly  
 
 **End-state / Outputs:**  
-- Summary plot: `plots/final/summary_plot.png`  
-- Animation: `gifs/insight_evolution.gif`  
+- `plots/final/summary_plot.png`  
+- `gifs/insight_evolution.gif`  
 
 **What This Proves:**  
-- Entire workflow visualized in one glance  
-- Storytelling through animation strengthens impact  
+- Visual story of global anomalies  
+- Combines quantitative and qualitative analysis  
 
 ---
 
 ## Phase 7: Closure
 
 **Scientific Question:**  
-“Does the workflow run end-to-end without missing outputs?”
+“Does the project run end-to-end with all outputs?”  
 
 **Description:**  
-- Verified all scripts and outputs  
-- Ensured reproducibility of analysis  
+- Verify scripts produce outputs  
+- Ensure no missing files  
+
+**Files & Outputs:**  
+- `notebooks/final_analysis.ipynb` (optional)  
 
 **End-state / Outputs:**  
-- `notebooks/final_analysis.ipynb` (optional, integrates all phases)  
-- Project folder fully structured and complete  
-
-**What This Proves:**  
-- Project is fully reproducible  
-- All phases and outputs are verified and linked  
+- Project fully reproducible  
+- All phases complete  
+- Ready for presentation or submission  
 
 ---
 
 ## Conclusion
 
-This project demonstrates the application of **real-world data science** on global climate data:
+This project demonstrates **global temperature anomaly trends** from 1880–2025.  
+By progressing through data intake, cleaning, exploratory and statistical analysis, insight isolation, and visual storytelling:
 
-1. Data intake → cleaning → EDA → statistical analysis  
-2. Extracted a clear insight: global temperatures are rising steadily  
-3. Visual storytelling with plots and GIF animation  
+- Long-term warming is visible and statistically validated  
+- Rolling mean and trend analysis provide temporal context  
+- Animated GIF communicates evolution clearly  
 
-- Combines **Python programming, statistics, visualization, and reproducible workflow**  
-- Ready for presentation to academic reviewers, admissions committees, or public demonstration  
-- Shows applied thinking, numerical rigor, and clear insight from raw data  
-
----
+The project combines **data science, statistical rigor, visualization, and storytelling**, suitable for top university applications.
